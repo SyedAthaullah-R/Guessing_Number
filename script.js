@@ -34,6 +34,7 @@ else{
 });
 document.querySelector('.again').addEventListener('click',function(){
     Score = 20;
+    ScretNumber = Math.trunc(Math.random() * 20) + 1;
     document.querySelector('.message').textContent = "Start Guessing...";
     document.querySelector('.number').textContent = "?";
     document.querySelector('.score').textContent = 20;
