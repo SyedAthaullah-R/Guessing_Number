@@ -25,7 +25,7 @@ document.querySelector('.check').addEventListener('click',function(){
     if(!guess) document.querySelector('.message').textContent= " Please enter a number 😶‍🌫️"
     
     else if(guess === ScretNumber){
-    document.querySelector('.message').textContent = " 🤩You guessed the Correct Number!"
+    document.querySelector('.message').textContent = " 🤩 Hurray!! You guessed the Correct Number!"
     document.querySelector('body').style.backgroundColor = "#60b347";
     document.querySelector('.number').style.width = "40rem";
     document.querySelector('.number').textContent = ScretNumber;
@@ -39,7 +39,7 @@ document.querySelector('.check').addEventListener('click',function(){
 }
 else if(guess !== ScretNumber){
    if(Score > 1) {
-    document.querySelector('.message').textContent = guess > ScretNumber ? "↗️ Too High!" : " Too Low!";
+    document.querySelector('.message').textContent = guess > ScretNumber ? "↗️ Too High!" : " ↙️Too Low!";
     Score--;
     document.querySelector('.score').textContent = Score;
 }
@@ -47,6 +47,7 @@ else if(guess !== ScretNumber){
 else{
     document.querySelector('.message').textContent = '😢 You Lost the game'
     document.querySelector('.score').textContent = 0;
+    playing = false;
     audio2.play();
     audio1.pause();
 }
